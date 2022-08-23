@@ -1,6 +1,6 @@
 # 05_컨테이너
 
-# 5.1 리스트
+# 5.1 리스트 (List)
 
 list_1 = []
 list_2 = [1, 2, 3]
@@ -20,7 +20,7 @@ print(list_6[2])    # Me
 list_6[0] = 'You'
 print(list_6) # ['You', 'My', 'Me', 'Mine']
 
-# 5.2 튜플
+# 5.2 튜플 (Tuple)
 
 tuple_1 = (1, 2, 3, 4)
 print(tuple_1)          # (1, 2, 3, 4)
@@ -47,7 +47,7 @@ print(type(tuple_5)) # <class 'tuple'>
 a, b = 4, 5
 print(a, b) # 4 5
 
-# 5.3 레인지
+# 5.3 레인지 (Range)
 
 # 5.3.1 기본형
 print(list(range(4)))       # [0, 1, 2, 3]
@@ -95,3 +95,41 @@ print(n[2:])        # mcoding
 print(n[::])        # kymcoding
 print(n[::-1])      # gnidocmyk
 print(n[-1:-8:-1])  # gnidocm
+
+# 5.5 셋 (Set)
+
+print({1, 2, 3, 4, 5, 1, 2, 3})  # {1, 2, 3, 4, 5}
+print(type({1, 2, 3}))           # <class 'set'>
+
+blank = {}
+print(type(blank))       # <class 'dict'>
+blank_set = set()
+print(type(blank_set))   # <class 'set'>
+
+# print({1, 2, 3}[0])    # Type Error
+
+my_list = [11, 22, 33, 44]
+print(my_list)           # [11, 22, 33, 44]
+print(set(my_list))      # {33, 11, 44, 22}
+
+Set_1 = {0, 1, 2, 3, 4}
+Set_2 = {1, 2, 3, "Set", "SET", (1, 2, 3)}
+
+print(Set_1 | Set_2)    # {0, 1, 2, 3, 4, 'SET', 'Set', (1, 2, 3)}
+print(Set_1 & Set_2)    # {1, 2, 3}
+print(Set_2 - Set_1)    # {'SET', 'Set', (1, 2, 3)}
+print(Set_1 ^ Set_2)    # {0, 'SET', 4, 'Set', (1, 2, 3)}
+
+# 5.6 딕셔너리 (Dictionary)
+
+dict_1 = {}
+dict_2 = {}
+
+print(type(dict_1))  # <class 'dict'>
+
+dict_1 = {'p' : 'python', 'j' : 'java', 'list' : [1, 2, 3]}
+print(dict_1)       # {'p': 'python', 'j': 'java', 'list': [1, 2, 3]}
+print(dict_1['j'])  # java
+
+dict_2 = dict(p = 'python', j = 'java', list = [1, 2, 3])
+print(dict_2)       # {'p': 'python', 'j': 'java', 'list': [1, 2, 3]}
